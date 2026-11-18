@@ -55,7 +55,8 @@ function draw() {
       ...face.rightEye.keypoints,
       ...face.lips.keypoints,
       ...face.leftEyebrow.keypoints,
-      ...face.rightEyebrow.keypoints
+      ...face.rightEyebrow.keypoints,
+      ...face.faceOval.keypoints
     ];
     for (let keypoint of selectedKeypoints) {
       fill(0, 255, 0);
@@ -88,6 +89,9 @@ function flattenData() {
     ...face.leftEye.keypoints,
     ...face.rightEye.keypoints,
     ...face.lips.keypoints,
+    ...face.leftEyebrow.keypoints,
+    ...face.rightEyebrow.keypoints,
+    ...face.faceOval.keypoints
   ];
   let data = [];
   // Normalizing keypoints relative to the face's bounding box should improve results
