@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/p5@2.3.3/lib/p5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+        <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <button id="add-button">Add training data</button>
+            <input type="text" id="label-input" placeholder="enter training label">
+            <br>
+            <button id="train-button">Train the model</button>
+            <button id="save-button">Save the model</button>
+            <p>FYI: Some browsers may block multiple file downloads.</p>
+            <p>A saved model should result in 3 files: model.json, model_meta.json, model.weights.bin</p>
+            <div id="sample-count-display"></div>
+        </main>
+        <script src="sketch.js"></script>
+    </body>
+</html>
