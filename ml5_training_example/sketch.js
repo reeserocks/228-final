@@ -58,7 +58,7 @@ function draw() {
       ...face.rightEyebrow.keypoints,
       ...face.faceOval.keypoints
     ];
-    for (let keypoint of selectedKeypoints) {
+    for (let keypoint of face.keypoints) {
       fill(0, 255, 0);
       noStroke();
       circle(keypoint.x, keypoint.y, 5);
@@ -96,7 +96,7 @@ function flattenData() {
   let data = [];
   // Normalizing keypoints relative to the face's bounding box should improve results
   // Otherwise, training will be heavily influenced by the size and posittion of the face in the frame
-  for (let keypoint of selectedKeypoints) {
+  for (let keypoint of face.keypoints) {
     let normX = (keypoint.x - face.box.xMin) / face.box.width;
     let normY = (keypoint.y - face.box.yMin) / face.box.height;
     data.push(normX, normY);
